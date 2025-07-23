@@ -47,43 +47,16 @@
 תשובה: ג. logging מאפשר רמות דיווח שונות וכתיבה לקובץ או קונסולה
 
 שאלה 17: מה תהיה תוצאת הריצה של הקוד הבא
-Python
-
-try:
-    result = 10 / 0
-except ValueError:
-    print("Value error")
-finally:
-    print("Done")
 תשובה: ג. יודפס "Done" ואז תיזרק שגיאת ZeroDivisionError כי אין except מתאים
 
 שאלה 18: הקוד הבא רץ לאט וצורך הרבה זיכרון
-Python
-
-def process():
-    data = create_big_list()
-    doubled = double_values(data)
-    return sum(doubled)
 מהי הדרך הכי טובה לזהות איזו מהפונקציות create_big_list או double_values אחראית לצריכת זיכרון גבוהה
-
 תשובה: ג. להשתמש ב־memory_profiler עם @profile כדי למדוד שימוש בזיכרון
 
 שאלה 19: מהו מצב של cycle reference בפייתון
 תשובה: ב. מצב שבו שני אובייקטים מחזיקים הפניה אחד לשני, כך שלא ניתן לפנות את הזיכרון
 
 שאלה 20: מה תהיה תוצאת הריצה של הקוד הבא מבחינת ניהול זיכרון
-class A:
-    def __init__(self):
-        self.b = None
-
-class B:
-    def __init__(self):
-        self.a = None
-
-a = A()
-b = B()
-a.b = b
-b.a = a
 תשובה: ב. שני האובייקטים יישארו בזיכרון כי יש ביניהם הפניה מעגלית
 
 שאלה 21: יש לך שני קבצים: module_a.py ו־module_b.py, שכל אחד מהם מייבא פונקציה מהשני.
